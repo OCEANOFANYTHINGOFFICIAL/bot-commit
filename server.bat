@@ -1,6 +1,6 @@
 @echo off
 set loop=0
-set maxLoop = 10
+set maxLoop = "10"
 
 git add . > nul
 git commit -m "update" > nul
