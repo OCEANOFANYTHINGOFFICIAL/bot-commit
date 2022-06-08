@@ -12,10 +12,10 @@ git add data.txt >nul
 git commit -m %datetimef% > nul
 set /a loop=%loop%+1 
 echo [%loop%] Commit Created At: %datetimef%
-if "%loop%"=="10" goto commit
+if "%loop%"=="10" goto final
 goto loop
 
-:commit
+:final
 echo Commiting All Changes...
 git push -u origin main >nul
 echo x=msgbox("Succesfully Commited %maxLoop% Contributes !!!",, "Success !!!") > success.vbs > nul
