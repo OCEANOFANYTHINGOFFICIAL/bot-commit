@@ -5,7 +5,7 @@ git add .
 git commit -m "update"
 :loop
 set datetimef=%date:~0,2%%date:~3,2%%date:~-4%%time:~0,2%%time:~3,2%%time:~6,2%%random%
-
+set datetimef=%datetimef: =%
 %datetimef% > data.txt
 git add data.txt
 git commit -m "%datetimef%"
