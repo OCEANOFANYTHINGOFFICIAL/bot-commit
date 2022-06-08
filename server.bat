@@ -1,6 +1,6 @@
 @echo off
 set loop=0
-set maxLoop = "10"
+set maxLoop = 10
 
 git add . > nul
 git commit -m "update" > nul
@@ -12,7 +12,7 @@ git add data.txt >nul
 git commit -m %datetimef% > nul
 set /a loop=%loop%+1 
 echo [%loop%] Commit Created At: %datetimef%
-if "%loop%"==%maxLoop% goto commit
+if "%loop%"=="%maxLoop%" goto commit
 goto loop
 
 :commit
